@@ -9,7 +9,11 @@ export class AppComponent {
     private viewContainer: ViewContainerRef,
     private cfr: ComponentFactoryResolver) {}
 
-  async lazyLoad() {}
+  async lazyLoad() {
+    const {LazyComponent} = await import('./lazy/lazy.component');
+    this.viewContainer.createComponent(this.cfr.resolveComponentFactory(LazyComponent));
+
+  }
 }
 
 

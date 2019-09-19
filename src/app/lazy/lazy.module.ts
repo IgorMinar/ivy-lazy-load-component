@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LazyComponent } from '../lazy/lazy.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [LazyComponent],
   imports: [
     CommonModule
   ]
